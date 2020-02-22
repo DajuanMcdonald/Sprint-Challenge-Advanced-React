@@ -1,7 +1,7 @@
 .App {
     text-align: center;
     display: flex;
-    height: 4rem;
+    height: 2rem;
     font-family: Noto Sans JP, sans-serif;
 
 
@@ -23,6 +23,9 @@
 
 .Dark-mode {
     background-color: darkslategrey;
+    .Card-container {
+        background-color: #282c34;
+    }
 
 }
 

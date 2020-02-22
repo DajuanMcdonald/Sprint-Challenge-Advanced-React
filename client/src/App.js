@@ -1,5 +1,5 @@
 import React from 'react';
-import '../src/App.css'
+import './App.scss'
 import {AppBar, Typography, FormControlLabel, Switch, FormGroup} from "@material-ui/core";
 
 
@@ -15,8 +15,8 @@ export default function App() {
 
     return (
         <>
+
             <AppBar className='App'>
-                <Typography>Google World Cup: Womens</Typography>
                 <FormGroup>
                     <FormControlLabel className='Form-label'
                                       control={<Switch checked={darkMode} onChange={handleChange}

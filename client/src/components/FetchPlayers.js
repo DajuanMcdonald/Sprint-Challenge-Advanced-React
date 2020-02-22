@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import App from '../App';
-import '../App.css';
+import '../App.scss';
 // import GraphPlayers from "./GraphPlayers";
 
 import axios from 'axios';
