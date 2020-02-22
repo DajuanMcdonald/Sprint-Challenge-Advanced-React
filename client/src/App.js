@@ -6,9 +6,11 @@ import {AppBar, Typography, FormControlLabel, Switch, FormGroup} from "@material
 export default function App() {
 
     //inline the useState for darkMode
-    const [darkMode, setDarkMode] = React.useState(true);
+    const [darkMode, setDarkMode] = React.useState(false);
     const handleChange = (ev) => {
         setDarkMode(ev.target.checked);
+        const element = document.body;
+        element.classList.toggle("Dark-mode")
     };
 
     return (
