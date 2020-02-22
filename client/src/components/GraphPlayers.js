@@ -152,7 +152,7 @@ function GraphPlayers() {
                     <BarChart width={930} height={450} data={data}>
                         <CartesianGrid strokeDashArray="3 3"/>
 
-                        <XAxis dataKey={data.map(country => country.country).filter(unique)} />
+                        <XAxis dataKey="country" />
                         <YAxis dataKey=""/>
                         <Tooltip/>
                         <Legend verticalAlign="bottom" height={36}/>
