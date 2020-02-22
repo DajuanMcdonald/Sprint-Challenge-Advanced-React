@@ -12,5 +12,5 @@ test('renders without crashing', () => {
 });
 
 test('renders to content to DOM', () => {
-  const { getByText } = render(<FetchPlayers/>)
+   render(<FetchPlayers/>)
 });

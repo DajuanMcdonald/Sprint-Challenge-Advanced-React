@@ -39,20 +39,21 @@ class FetchPlayers extends Component {
                             boxShadow: '3px 3px red, -1em 0 .4em green',
                             margin: '5%',
                             border: '1px solid',
-                            width: '300px'
+                            width: '300px',
+                            fontFamily: 'Noto Sans JP',
+                            textAlign: 'center'
                         }} key={player.id}>
-
-                                {player.name}
-
+                            <h4>Name: {player.name}</h4>
 
                             <CardContent>
                                 <Typography>
-                                    {player.country}
+                                    <span>Country: {player.country} </span>
+
 
                                 </Typography>
                                 <Typography>
+                                    <span>Searches: {player.searches} </span>
 
-                                    {player.searches}
                                 </Typography>
                             </CardContent>
                         </Card>
