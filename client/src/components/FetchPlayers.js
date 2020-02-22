@@ -5,7 +5,6 @@ import axios from 'axios';
 import {Card, CardContent, Typography} from "@material-ui/core";
 
 
-
 class FetchPlayers extends Component {
     constructor() {
         super();
