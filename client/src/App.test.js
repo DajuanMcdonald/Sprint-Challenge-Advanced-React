@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import App from './App';
+import FetchPlayers from "./components/FetchPlayers";
 
-it('renders without crashing', () => {
+
+test('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
+});
+
+test('renders to content to DOM', () => {
+  const { getByText } = render(<FetchPlayers/>)
 });
