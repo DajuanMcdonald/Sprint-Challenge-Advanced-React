@@ -7,11 +7,18 @@
 
 }
 
+.Card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .Form-label {
 
-    padding-bottom: 20px;
     display: flex;
     justify-content: flex-end;
+    width: 120px;
+    align-self: flex-end;
 }
 
 .App-logo {

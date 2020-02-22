@@ -10,7 +10,6 @@ import {
     Legend,
     Bar
 } from "recharts";
-import {Toolbar} from "@material-ui/core";
 
 class GraphPlayers extends Component {
     constructor() {
@@ -37,13 +36,14 @@ class GraphPlayers extends Component {
                     {this.state.data.map((graph) => (
 
 
-                        <BarChart width={730} height={250} data={data}>
+                        <BarChart width={730} height={250} data={graph}>
                             <CartesianGrid strokeDashArray="3 3"/>
-                            <XAxis dataKey={graph.country}/>
-                            <YAxis/>
+                            {/*<XAxis dataKey={graph.country}/>*/}
+                            <YAxis dataKey={graph.country}/>
                             <Tooltip/>
-                            <Legend/>
-                            <Bar/>
+                            <Legend verticalAlign="top" height={36}/>
+                            <Bar name="country" dataKey={graph.country} fill="#8884d8"/>
+                            <Bar name="searches" dataKey={graph.searches} fill="#82ca9d"/>
                         </BarChart>
                     ))}
                 </div>
