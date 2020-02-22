@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import App from '../App';
 import '../App.scss';
-// import GraphPlayers from "./GraphPlayers";
+import GraphPlayers from "./GraphPlayers";
 
 import axios from 'axios';
 import {Card, CardContent, Typography} from "@material-ui/core";
@@ -31,8 +31,9 @@ class FetchPlayers extends Component {
     render() {
         return (
             <div>
-                <App />
-                <div className="dark-mode" >
+                <App/>
+                <div className="dark-mode">
+                    <GraphPlayers/>
                     {this.state.players.map((player) => (
 
                         <Card style={{

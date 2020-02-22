@@ -1,6 +1,7 @@
 import React from 'react';
+
 import './App.scss'
-import {AppBar, Typography, FormControlLabel, Switch, FormGroup} from "@material-ui/core";
+import {AppBar, FormControlLabel, Switch, FormGroup} from "@material-ui/core";
 
 
 export default function App() {
