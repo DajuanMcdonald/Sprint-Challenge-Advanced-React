@@ -32,7 +32,7 @@ class FetchPlayers extends Component {
         return (
             <div>
                 <App />
-                <div className="Card-container" style={{backgroundColor: 'blue'}}>
+                <div className="dark-mode" >
                     {this.state.players.map((player) => (
 
                         <Card style={{

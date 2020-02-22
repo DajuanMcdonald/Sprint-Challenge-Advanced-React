@@ -21,7 +21,7 @@ export default function App() {
                     <FormControlLabel className='Form-label'
                                       control={<Switch checked={darkMode} onChange={handleChange}
                                                        arial-label="toggle switch"/>}
-                                      label={darkMode ? 'LightMode' : 'DarkMode'}
+                                      label={darkMode ? 'DarkMode' : 'LightMode'}
                     />
                 </FormGroup>
             </AppBar>
