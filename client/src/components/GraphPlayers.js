@@ -145,7 +145,7 @@ function GraphPlayers() {
 
                     <Tooltip/>
                     <Legend verticalAlign="bottom" height={36}/>
-                    <Scatter name="Women" dataKey="name" fill="blue" stroke="red"/>
+                    <Scatter arial-label="scatter-plot" name="Women" dataKey="name" fill="blue" stroke="red"/>
 
                 </ScatterChart>
             </div>
