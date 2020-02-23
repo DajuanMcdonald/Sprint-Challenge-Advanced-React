@@ -20,10 +20,20 @@ test('renders to content to DOM', () => {
 
 test('display correct toggle state', () => {
     const {getByLabelText, getByTestId} = render(<App />);
+
     const checked = getByLabelText("LightMode");
     const toggleState = getByTestId("toggle-control");
+    
     expect(checked.value).toBe("");
-    expect(toggleState.textContent).toBe("Mode");
+    expect(toggleState.textContent).toBe("LightMode");
     fireEvent.change(toggleState);
 
 });
+
+// test('display labels on cards', () => {
+//     const {getByText, getByTestId} = render(<FetchPlayers/>);
+//     // const label = getByText("United States");
+//     const textcontent = getByTestId("player-card");
+//     // expect(label.textContent).toBe("United States");
+//     expect(textcontent.textContent).toBe("Name:");
+// });

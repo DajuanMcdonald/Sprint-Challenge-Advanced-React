@@ -42,18 +42,19 @@ class FetchPlayers extends Component {
                             width: '300px',
                             fontFamily: 'Noto Sans JP',
                             textAlign: 'center'
-                        }} key={player.id}>
+                        }} data-testid="player-card" key={player.id}>
                             <h4>Name: {player.name}</h4>
 
                             <CardContent>
                                 <Typography>
                                     {/*getByDisplayValue*/}
-                                    <span>Country: {player.country} </span>
+
+                                    <span data-testid="country">Country: {player.country} </span>
 
 
                                 </Typography>
                                 <Typography>
-                                    <span>Searches: {player.searches} </span>
+                                    <span data-testid="searches">Searches: {player.searches} </span>
 
                                 </Typography>
                             </CardContent>
