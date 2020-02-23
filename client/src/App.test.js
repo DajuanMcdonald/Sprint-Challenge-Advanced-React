@@ -23,7 +23,7 @@ test('display correct toggle state', () => {
     const checked = getByLabelText("LightMode");
     const toggleState = getByTestId("toggle-control");
     expect(checked.value).toBe("");
-    expect(toggleState.textContent).toBe("LightMode");
+    expect(toggleState.textContent).toBe("Mode");
     fireEvent.change(toggleState);
 
 });
