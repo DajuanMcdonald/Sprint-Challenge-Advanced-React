@@ -15,18 +15,25 @@ export default function App() {
     };
 
     return (
-        <>
+        <div>
 
             <AppBar className='App'>
                 <FormGroup>
-                    <FormControlLabel className='Form-label'
-                                      control={<Switch checked={darkMode} onChange={handleChange}
-                                                       arial-label="toggle switch"/>}
-                                      label={darkMode ? 'DarkMode' : 'LightMode'}
+                    <FormControlLabel
+                        data-testid="toggle-control"
+                        className='Form-label'
+                        label={darkMode ? 'DarkMode' : 'LightMode'}
+                        control={
+                            <Switch
+                                checked={darkMode}
+                                onChange={handleChange}
+                                arial-label="toggle-switch"
+                            />
+                        }
                     />
                 </FormGroup>
             </AppBar>
-        </>
+        </div>
     )
 
 }
