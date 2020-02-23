@@ -119,7 +119,7 @@ const data = [
 
 
 function GraphPlayers() {
- 
+
     // const unique = (value, index, self) => {
     //     return self.indexOf(value) === indexOf
     // };

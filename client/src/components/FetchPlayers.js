@@ -38,7 +38,7 @@ class FetchPlayers extends Component {
                         <Card style={{
                             boxShadow: '3px 3px red, -1em 0 .4em green',
                             margin: '5%',
-                            border: '1px solid',
+                            // border: '1px solid',
                             width: '300px',
                             fontFamily: 'Noto Sans JP',
                             textAlign: 'center'
@@ -47,6 +47,7 @@ class FetchPlayers extends Component {
 
                             <CardContent>
                                 <Typography>
+                                    {/*getByDisplayValue*/}
                                     <span>Country: {player.country} </span>
 
 
