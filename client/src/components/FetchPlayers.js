@@ -33,7 +33,6 @@ class FetchPlayers extends Component {
             <div>
                 <App/>
                 <div className="dark-mode">
-                    <GraphPlayers/>
                     {this.state.players.map((player) => (
 
                         <Card style={{
@@ -60,6 +59,7 @@ class FetchPlayers extends Component {
                         </Card>
                     ))}
                 </div>
+                <GraphPlayers/>
 
             </div>
         );

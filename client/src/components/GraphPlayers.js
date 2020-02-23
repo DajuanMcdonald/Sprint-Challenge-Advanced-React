@@ -1,16 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
-import axios from 'axios';
+// import axios from 'axios';
 
 import {
-    BarChart,
+    ScatterChart,
+    Scatter,
     CartesianGrid,
     XAxis,
     YAxis,
     Tooltip,
-    Legend,
-    Bar
+    Legend
 } from "recharts";
+
 
 const data = [
     {name: "Alex Morgan", country: "United States", searches: 100},
@@ -118,56 +119,39 @@ const data = [
 
 
 function GraphPlayers() {
-   const [datum, setData] = useState([]);
+ 
+    // const unique = (value, index, self) => {
+    //     return self.indexOf(value) === indexOf
+    // };
 
-    useEffect(() => {
-        axios.get('http://localhost:5000/api/players')
-            .then(res => {
-                setData(res.data)
-            })
-            .then(response => JSON.stringify(response))
-            .catch(err => console.log('error', err))
-    }, []);
+    // const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
-    const unique = (value, index, self) => {
-        return self.indexOf(value) === index
-    };
+    // const uniqueCountry = datum.map(country => country.country).filter(unique);
 
-    const uniqueCountry = datum.map(country => country.country).filter(unique);
-    console.log(uniqueCountry);
+    // const newData = datum.map(item => item);
 
-    const newData = datum.map(item => item);
-    console.log(newData.map(d => d.searches));
+    // const countries = data.map(country => country.country).filter(unique);
 
+    return (
+        <>
 
+            <div className="scatter-chart">
+                <ScatterChart
+                    margin={{top: 20, right: 20, bottom: 20, left: 20}}
+                    width={850} height={250} data={data}>
+                    <CartesianGrid stroke="lightgreen"/>
+                    <XAxis dataKey="name" stroke="black"/>
+                    <YAxis dataKey="searches" stroke="#88ca9d"/>
 
+                    <Tooltip/>
+                    <Legend verticalAlign="bottom" height={36}/>
+                    <Scatter name="Women" dataKey="name" fill="blue" stroke="red"/>
 
-
-
-        return (
-            <>
-
-                <div>
-                    {/*{datum.map(location => location)}*/}
-                    <BarChart width={930} height={450} data={data}>
-                        <CartesianGrid strokeDashArray="3 3"/>
-
-                        <XAxis dataKey="country" />
-                        <YAxis dataKey=""/>
-                        <Tooltip/>
-                        <Legend verticalAlign="bottom" height={36}/>
-                        {uniqueCountry.map(country => (
-                            <Bar dataKey={country}/>
-                        ))}
-
-                    </BarChart>
-                </div>
-            </>
-        );
-    }
-
-
-
+                </ScatterChart>
+            </div>
+        </>
+    );
+}
 
 
 export default GraphPlayers;
