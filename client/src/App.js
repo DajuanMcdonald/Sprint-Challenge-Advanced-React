@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.scss'
+import {AppBar, FormControlLabel, Switch, FormGroup} from "@material-ui/core";
+
+
+export default function App() {
+
+    //inline the useState for darkMode
+    const [darkMode, setDarkMode] = React.useState(false);
+    const handleChange = (ev) => {
+        setDarkMode(ev.target.checked);
+        const element = document.body;
+        element.classList.toggle("Dark-mode")
+    };
+
+    return (
+        <div>
+
+            <AppBar className='App'>
+                <FormGroup>
+                    <FormControlLabel
+                        data-testid="toggle-control"
+                        className='Form-label'
+                        label={darkMode ? 'DarkMode' : 'LightMode'}
+                        control={
+                            <Switch
+                                checked={darkMode}
+                                onChange={handleChange}
+                                arial-label="toggle-switch"
+                            />
+                        }
+                    />
+                </FormGroup>
+            </AppBar>
+        </div>
+    )
+
 }
-
-export default App;
